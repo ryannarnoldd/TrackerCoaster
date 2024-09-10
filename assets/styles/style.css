@@ -1,0 +1,77 @@
+/* Root colors. */
+:root {
+  --black: #000;
+  --light-blue: #90d5ff;
+  --blue: #0000ff;
+}
+
+main {
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+footer {
+  color: var(--black);
+  text-align: center;
+}
+
+header {
+  color: var(--black);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+/* Rides container. */
+.rides-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+/* Each ride. */
+.ride {
+  background-color: var(--light-blue);
+  color: var(--black);
+  border: 2px solid var(--blue);
+  border-radius: 10px;
+
+
+  justify-content: center;
+  text-align: center;
+
+  color: white;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+
+  /* padding: 2rem; */
+
+  flex: 1 1 100%;
+
+  max-width: 500px;
+}
+
+/* .space for now if needed. */
+.space {
+  background-image: url('../images/space.jpg');
+}
+
+/* 2 per row. */
+@media screen and (min-width: 768px) {
+  .ride {
+    flex: 1 1 50%;
+  }
+}
+/* 3 per row. */
+@media screen and (min-width: 1024px) {
+  .ride {
+    flex: 1 1 33.3333%;
+  }
+
+}
