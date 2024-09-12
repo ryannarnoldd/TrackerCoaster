@@ -13,15 +13,9 @@
 <body>
     <header>
         <h1>TrackerCoaster</h1>
-        <div class="stats">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Launch demo modal
-            </button>
-            <h2>Overall Rating: 
-                <!-- <span id="overall">0</span> -->
-            </h2>
-            <!-- <h2>Coaster Done: 34/50</h2> -->
-        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+        </button>
     </header>
 
     <main>
@@ -42,7 +36,7 @@
                     <h2>Space Mountain</h2>
                     <h3>Park: Magic Kingdom</h3>
 
-                    <form for="space-mountain" method="post" onchange="updateRide(this)">
+                    <form for="space" method="post" onchange="updateRide(this)">
                         <h4>Overall Rating: 
                             <span id="rating">0</span>
                         </h4>
@@ -78,6 +72,221 @@
                     </form>
                 </div>
             </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h2>Rock 'n' Rollercoaster</h2>
+                    <h3>Park: DHS</h3>
+
+                    <form for="rnr" method="post" onchange="updateRide(this)">
+                        <h4>Overall Rating: 
+                            <span id="rating">0</span>
+                        </h4>
+
+                        <label for="scariness" class="form-label">Scariness: </label>
+                        <select class="form-select" id="scariness">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+
+                        <label for="theming" class="form-label">Theming: </label>
+                        <select class="form-select" id="theming">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <label for="enjoyment" class="form-label">Enjoyment: </label>
+                        <select class="form-select" id="enjoyment">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <textarea class="form-control" placeholder="Comments..." id="comment" ></textarea>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-body">
+                    <h2>Rise of Resistance</h2>
+                    <h3>Park: DHS</h3>
+
+                    <form for="rise" method="post" onchange="updateRide(this)">
+                        <h4>Overall Rating: 
+                            <span id="rating">0</span>
+                        </h4>
+
+                        <label for="scariness" class="form-label">Scariness: </label>
+                        <select class="form-select" id="scariness">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+
+                        <label for="theming" class="form-label">Theming: </label>
+                        <select class="form-select" id="theming">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <label for="enjoyment" class="form-label">Enjoyment: </label>
+                        <select class="form-select" id="enjoyment">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <textarea class="form-control" placeholder="Comments..." id="comment" ></textarea>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-body">
+                    <h2>Big Thunder Mountain</h2>
+                    <h3>Park: Magic Kingdom</h3>
+
+                    <form for="thunder" method="post" onchange="updateRide(this)">
+                        <h4>Overall Rating: 
+                            <span id="rating">0</span>
+                        </h4>
+
+                        <label for="scariness" class="form-label">Scariness: </label>
+                        <select class="form-select" id="scariness">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+
+                        <label for="theming" class="form-label">Theming: </label>
+                        <select class="form-select" id="theming">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <label for="enjoyment" class="form-label">Enjoyment: </label>
+                        <select class="form-select" id="enjoyment">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <textarea class="form-control" placeholder="Comments..." id="comment" ></textarea>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-body">
+                    <h2>Tron</h2>
+                    <h3>Park: Magic Kingdom</h3>
+
+                    <form for="tron" method="post" onchange="updateRide(this)">
+                        <h4>Overall Rating: 
+                            <span id="rating">0</span>
+                        </h4>
+
+                        <label for="scariness" class="form-label">Scariness: </label>
+                        <select class="form-select" id="scariness">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+
+                        <label for="theming" class="form-label">Theming: </label>
+                        <select class="form-select" id="theming">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <label for="enjoyment" class="form-label">Enjoyment: </label>
+                        <select class="form-select" id="enjoyment">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <textarea class="form-control" placeholder="Comments..." id="comment" ></textarea>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-body">
+                    <h2>Test Track</h2>
+                    <h3>Park: EPCOT</h3>
+
+                    <form for="track" method="post" onchange="updateRide(this)">
+                        <h4>Overall Rating: 
+                            <span id="rating">0</span>
+                        </h4>
+
+                        <label for="scariness" class="form-label">Scariness: </label>
+                        <select class="form-select" id="scariness">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+
+                        <label for="theming" class="form-label">Theming: </label>
+                        <select class="form-select" id="theming">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <label for="enjoyment" class="form-label">Enjoyment: </label>
+                        <select class="form-select" id="enjoyment">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <textarea class="form-control" placeholder="Comments..." id="comment" ></textarea>
+                    </form>
+                </div>
+            </div>
+
 
 
         </div>
