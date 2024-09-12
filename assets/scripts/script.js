@@ -10,7 +10,7 @@ function readLocalStorage() {
     localStorage.setItem(name, JSON.stringify(newObject));
   }
 
-  function updateRide(form){
+  function updateRide(form) {
     let scariness = form.querySelector("#scariness").value;
     let theming   = form.querySelector("#theming").value;
     let enjoyment = form.querySelector("#enjoyment").value;
@@ -31,18 +31,18 @@ function readLocalStorage() {
         rating: rating
     };
 
-    storeLocalStorage(name, ride)
+    storeLocalStorage(name, ride);
 
-    getTotalOverallRating()
+    getTotalOverallRating();
 
     // calcOverallRating(form)
   }
 
   function getTotalOverallRating() {
-    const overallSpan = document.querySelector('#overall')
+    const overallSpan = document.querySelector('#overall');
     let total = 0;
     for (i = 0; i < localStorage.length; i++) {
-      let rating = JSON.parse(localStorage.getItem(localStorage.key(i))).rating
+      let rating = JSON.parse(localStorage.getItem(localStorage.key(i))).rating;
       total += rating;
     }
 
