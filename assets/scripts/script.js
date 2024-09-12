@@ -15,6 +15,7 @@ function updateRide(form) {
   let scariness = form.querySelector("#scariness").value;
   let theming   = form.querySelector("#theming").value;
   let enjoyment = form.querySelector("#enjoyment").value;
+  let comment  = form.querySelector("#comment").value;
   const name = form.getAttribute("for");
   const ratingSpan = form.querySelector("#rating");
 
@@ -29,7 +30,8 @@ function updateRide(form) {
       scariness: scariness,
       theming: theming,
       enjoyment: enjoyment,
-      rating: rating
+      rating: rating,
+      comment: comment
   };
 
   storeLocalStorage(name, ride);
@@ -50,15 +52,21 @@ function getTotalOverallRating() {
 }
 
 function renderData() {
+  const completedSpan = document.querySelector('#completed');
   for (i = 0; i < localStorage.length; i++) {
     const ride = JSON.parse(localStorage.getItem(localStorage.key(i)));
     const form = document.querySelector(`form[for="${localStorage.key(i)}"]`);
-    console.log(form);
     form.querySelector("#scariness").value = ride.scariness;
     form.querySelector("#theming").value = ride.theming;
     form.querySelector("#enjoyment").value = ride.enjoyment;
     form.querySelector("#rating").innerHTML = ride.rating.toFixed(2);
+
+    if (ride.comment) {
+      form.querySelector('#comment').value = ride.comment;
+    }
   }
+
+  completedSpan.innerHTML = localStorage.length;
 
   getTotalOverallRating();
 }
