@@ -10,6 +10,10 @@ main {
   flex-wrap: wrap; */
 }
 
+body{
+background-color: darkcyan;
+
+}
 footer {
   color: var(--black);
   text-align: center;
@@ -60,6 +64,58 @@ header h1 {
 /* .space for now if needed. */
 .space {
   background-image: url('../images/space.jpg');
+}
+
+
+
+.rnr {
+  background-image: url('../images/RocNRollercoaster.png');
+  background-size: cover;
+}
+.rise {
+  background-image: url('../images/rise.png');
+  background-size: cover;
+
+}
+.thunder {
+  background-image: url('../images/thunder.png');
+  background-size: cover;
+
+}
+.tron {
+  background-image: url('../images/Tron.png');
+  background-size: cover;
+
+}
+
+
+
+
+.hp {
+  background-image: url('../images/HP.png');
+  background-size: cover;
+
+}
+.pirates {
+  background-image: url('../images/pirates.png');
+  background-size: cover;
+
+}
+.mako {
+  background-image: url('../images/mako.png');
+
+  background-size: cover;
+
+}
+.IG {
+  background-image: url('../images/irongwazi.png');
+  background-size: cover;
+
+}
+.VC {
+  background-image: url('../images/VC.png');
+  background-size: cover;
+
 }
 
 /* 2 per row. */
