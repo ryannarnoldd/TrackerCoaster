@@ -1,7 +1,3 @@
-const scarinessEl = document.getElementById("#scariness");
-const themingEl = document.getElementById("#theming");
-const enjoymentEl = document.getElementById("#enjoyment");
-
 function readLocalStorage() {
     const data = JSON.parse(localStorage.getItem("ride")) || [];
     return data;
@@ -36,7 +32,7 @@ function updateRide(form) {
 
   storeLocalStorage(name, ride);
 
-  renderData();
+  getTotalOverallRating();
 }
 
 function getTotalOverallRating() {
@@ -52,22 +48,35 @@ function getTotalOverallRating() {
 }
 
 function renderData() {
-  const completedSpan = document.querySelector('#completed');
-  for (i = 0; i < localStorage.length; i++) {
-    const ride = JSON.parse(localStorage.getItem(localStorage.key(i)));
-    const form = document.querySelector(`form[for="${localStorage.key(i)}"]`);
-    form.querySelector("#scariness").value = ride.scariness;
-    form.querySelector("#theming").value = ride.theming;
-    form.querySelector("#enjoyment").value = ride.enjoyment;
-    form.querySelector("#rating").innerHTML = ride.rating.toFixed(2);
+  if (localStorage.length == 0) {
+    const formList = document.getElementsByTagName('form');
 
-    if (ride.comment) {
-      form.querySelector('#comment').value = ride.comment;
+    for (i = 0; i < formList.length; i++) {
+      const formName = formList[i].getAttribute('for')
+      storeLocalStorage(formName, {
+        scariness: 3,
+        theming: 3,
+        enjoyment: 3,
+        rating: 3,
+        comment: '',
+      });
     }
   }
 
-  completedSpan.innerHTML = localStorage.length;
 
+  const completedSpan = document.querySelector('#completed');
+
+  for (i = 0; i < localStorage.length; i++) {
+    const rideName = localStorage.key(i);
+    const rideData = JSON.parse(localStorage.getItem(rideName));
+    const form = document.querySelector(`form[for="${rideName}"]`);
+    form.querySelector("#scariness").value = rideData.scariness;
+    form.querySelector("#theming").value = rideData.theming;
+    form.querySelector("#enjoyment").value = rideData.enjoyment;
+    form.querySelector("#rating").innerHTML = rideData.rating.toFixed(2);
+    form.querySelector('#comment').value = rideData.comment;
+  }
+  completedSpan.innerHTML = localStorage.length;
   getTotalOverallRating();
 }
 
