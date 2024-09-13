@@ -48,6 +48,22 @@ function getTotalOverallRating() {
 }
 
 function renderData() {
+  if (localStorage.length == 0) {
+    const formList = document.getElementsByTagName('form');
+
+    for (i = 0; i < formList.length; i++) {
+      const formName = formList[i].getAttribute('for')
+      storeLocalStorage(formName, {
+        scariness: 3,
+        theming: 3,
+        enjoyment: 3,
+        rating: 3,
+        comment: '',
+      });
+    }
+  }
+
+
   const completedSpan = document.querySelector('#completed');
 
   for (i = 0; i < localStorage.length; i++) {
