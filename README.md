@@ -27,23 +27,17 @@ Here is a photo of the functionality of the product, where you can rate various 
 
 ## Credits
 
-Ryan Arnold
-Larry
-Brian
-Enzo (Anas)
+1. Ryan Arnold
+2. Larry
+3. Brian
+4. Enzo (Anas)
 
 Bootstrap 5: https://getbootstrap.com/docs/5.0/getting-started/introduction/
 
-If you followed tutorials, include links to those here as well.
-
 ## License
 
-MIT License
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-
+Mit License
+ 
 ## Features
 
 Contains:
