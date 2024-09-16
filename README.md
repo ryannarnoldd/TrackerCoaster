@@ -30,7 +30,7 @@ Here is a photo of the functionality of the product, where you can rate various 
 1. Ryan Arnold
 2. Larry
 3. Brian
-4. Enzo (Anas)
+4. Enzo (Anas Alaiwah)
 
 Bootstrap 5: https://getbootstrap.com/docs/5.0/getting-started/introduction/
 
