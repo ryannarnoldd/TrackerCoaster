@@ -1,19 +1,12 @@
 /* Root colors. */
 :root {
   --black: #000;
-  --light-blue: #90d5ff;
-  --blue: #0000ff;
 }
 
-main {
-  /* display: flex;
-  flex-wrap: wrap; */
-}
-
-body{
+body {
 background-color: #ADD8E6;
-
 }
+
 footer {
   color: var(--black);
   text-align: center;
@@ -31,6 +24,10 @@ header h1 {
   text-shadow: 2px 1px 1px rgba(0, 0, 0, 1);
 }
 
+textarea {
+  resize: none;
+}
+
 /* Rides container. */
 .rides-container {
   display: flex;
@@ -42,33 +39,10 @@ header h1 {
   padding: 0 1rem;
 }
 
-/* Each ride. */
-.ride {
-  background-color: var(--light-blue);
-  color: var(--black);
-  border: 2px solid var(--blue);
-  border-radius: 10px;
 
-
-  justify-content: center;
-  text-align: center;
-
-  color: white;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
-
-  /* padding: 2rem; */
-
-  flex: 1 1 100%;
-
-  max-width: 500px;
-}
-
-/* .space for now if needed. */
 .space {
   background-image: url('../images/space.jpg');
 }
-
-
 
 .rnr {
   background-image: url('../images/RocNRollercoaster.png');
@@ -132,8 +106,4 @@ header h1 {
     flex: 1 1 33.3333%;
   }
 
-}
-
-textarea {
-  resize: none;
 }
