@@ -80,4 +80,5 @@ function renderData() {
   getTotalOverallRating();
 }
 
+
 renderData();
